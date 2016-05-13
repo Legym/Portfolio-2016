@@ -244,7 +244,6 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 
-
 # Note: VisualStudio gitignore rules may also be relevant
 
 # Umbraco

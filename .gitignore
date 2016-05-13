@@ -263,5 +263,3 @@ ModelManifest.xml
 
 # ImageProcessor DiskCache 
 **/App_Data/cache/
-
-ApplicationInsights.config

@@ -23,8 +23,8 @@ gulp.task('lint', function() {
 // Compile Our Sass
 gulp.task('sass', function() {
     gulp.src([
+        'node_modules/foundation-sites/dist/foundation.min.css',
         'scss/*.scss',
-        'node_modules/foundation-sites/dist/foundation.min.css'
         ])
         .pipe(plumber())
     	.pipe(sass(

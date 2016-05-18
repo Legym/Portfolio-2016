@@ -263,3 +263,5 @@ ModelManifest.xml
 
 # ImageProcessor DiskCache 
 **/App_Data/cache/
+
+**/node_modules/

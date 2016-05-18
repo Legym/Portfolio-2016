@@ -7,6 +7,8 @@ Web Server: IIS 10d
 SQL Server: Microsoft SQLServer
 IDE: Visual Studio
 
+Localdb: mygelb.sql
+
 # Installation of a new Umbraco Project
 1. Visual Studio > File > New Project
 2. Choose ASP.NET Web Application > Empty
@@ -37,3 +39,6 @@ IDE: Visual Studio
 2. Open MVS Solution in Visual Studio
 3. Build and run. Do not debug. 
 > local enviroment. Localhost1337
+
+# Existing Database
+1. Web.config : Configure DB to connect to cloned DB (Mygelb.sql)

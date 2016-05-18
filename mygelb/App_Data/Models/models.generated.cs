@@ -18,7 +18,7 @@ using Umbraco.Web;
 using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
-[assembly: PureLiveAssembly, System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly: PureLiveAssembly, System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -63,6 +63,41 @@ namespace Umbraco.Web.PublishedContentModels
 		public string Title
 		{
 			get { return this.GetPropertyValue<string>("title"); }
+		}
+	}
+
+	/// <summary>Landing Pages</summary>
+	[PublishedContentModel("landingPages")]
+	public partial class LandingPages : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "landingPages";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public LandingPages(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<LandingPages, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Page title
+		///</summary>
+		[ImplementPropertyType("pageTitle")]
+		public string PageTitle
+		{
+			get { return this.GetPropertyValue<string>("pageTitle"); }
 		}
 	}
 

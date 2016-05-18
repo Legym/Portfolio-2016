@@ -1,6 +1,62 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = null;
+    Layout = null;
+    var home = @CurrentPage.Site();
 }
 
-@RenderBody()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="@CurrentPage.siteDescription">
+
+    <title>@CurrentPage.Name | @CurrentPage._siteTitle</title>
+
+    <!-- Fonts -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/app.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-sm-12 col-md-4">
+                    <a href="@home.Url">
+                        <div class="brand" style="background-image:url('@(home.SiteLogo)?height=65&width=205&bgcolor=000')"></div>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <nav>
+
+                        @{ Html.RenderPartial("MainNavigation"); }
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div id="toggle" class="toggle">
+            <a href="#" class="cross"><span></span></a>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer class="field dark">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascripts -->
+    <script src="~/scripts/district.js"></script>
+</body>
+</html>

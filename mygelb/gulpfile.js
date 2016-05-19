@@ -24,6 +24,7 @@ gulp.task('lint', function() {
 gulp.task('sass', function() {
     gulp.src([
         'node_modules/foundation-sites/dist/foundation.min.css',
+        'css/jquery.mmenu.all.css',
         'scss/*.scss',
         ])
         .pipe(plumber())
@@ -60,9 +61,9 @@ gulp.task('images', function() {
 gulp.task('scripts', function() {
     gulp.src([
         "js/vendor/jquery-2.2.3.min.js",
+        "js/vendor/jquery.mmenu.all.min.js",
         "node_modules/foundation-sites/dist/foundation.min.js",
         "js/vendor/slick.min.js",
-        "js/vendor/jquery.mmenu.oncanvas.js",
         "js/base.js",
         "js/router.js"
 	])

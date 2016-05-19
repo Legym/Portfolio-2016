@@ -68,8 +68,10 @@
 		 * All pages
 		 */
 		common: {
-			init: function() {
+		    init: function () {
+		        FEATURES.mmenu();
 			    FEATURES.runFoundation();
+			    
 			}
 		},
 	};

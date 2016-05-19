@@ -57,5 +57,30 @@ var FEATURES = {
 
     runFoundation: function () {
         $(document).foundation();
+
+        document.querySelector("#nav-toggle").addEventListener("click", function () {
+                this.classList.toggle("active");
+        });
     },
+
+    mmenu: function () {
+        $("#menu-mobile").mmenu({
+            "offCanvas": {
+                "position": "right"
+            },
+            "extensions": [
+                "theme-dark"
+            ],
+            "navbars": [
+                {
+                    "position": "bottom",
+                    "content": [
+                    "<a class='fa fa-envelope' href='#/'></a>",
+                    "<a class='fa fa-twitter' href='#/'></a>",
+                    "<a class='fa fa-facebook' href='#/'></a>"
+                    ]
+                }
+            ]
+        });
+    }
 };

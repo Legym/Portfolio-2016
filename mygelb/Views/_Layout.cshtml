@@ -10,11 +10,11 @@
 
     <!-- Meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>@CurrentPage.Name | @CurrentPage._siteTitle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="@CurrentPage.siteDescription">
-
-    <title>@CurrentPage.Name | @CurrentPage._siteTitle</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- Fonts -->
 
@@ -23,38 +23,41 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
+    <div id="my-page">
+
+        <header class="header">
             <div class="row">
-                <div class="col-xs-8 col-sm-12 col-md-4">
-                    <a href="@home.Url">
-                        <div class="brand" style="background-image:url('@(home.SiteLogo)?height=65&width=205&bgcolor=000')"></div>
-                    </a>
-                </div>
-                <div class="col-sm-12 col-md-8">
-                    <nav>
+                <div class="small-12 columns">
+                    <a id="nav-toggle" href="#menu-mobile"><span></span></a>
 
+                    <nav id="menu-mobile">
                         @{ Html.RenderPartial("MainNavigation"); }
+                    </nav>
 
+                    <nav id="desktop-menu">
+                        @{ Html.RenderPartial("MainNavigation"); }
                     </nav>
                 </div>
             </div>
-        </div>
 
-        <div id="toggle" class="toggle">
-            <a href="#" class="cross"><span></span></a>
-        </div>
-    </header>
+        </header>
 
-    @RenderBody()
-
-    <footer class="field dark">
-        <div class="container">
+        <main>
             <div class="row">
-
+                <div class="small-12 columns">
+                    @RenderBody()
+                </div>
             </div>
-        </div>
-    </footer>
+        </main>
+
+        <footer>
+            <div class="row">
+                <div class="small-12 columns">
+
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <!-- Javascripts -->
     <script src="~/scripts/district.js"></script>

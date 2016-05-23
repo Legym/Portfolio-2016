@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using System.Web.Mvc.Html;
+@using System.Web.Mvc;
+@{
+    Layout = "_Layout.cshtml";
+	@section Styles {
+		<link href="@Url.Content("/css/Main.SmartBlog.css")" rel="stylesheet" type="text/css" />
+	}
+}
+
+	<section class="content">
+		<div class="payload">
+			<div class="smartBlogLeft">
+				@RenderBody()
+				
+				<div class="smartBlogRight">
+					@Html.Partial("SmartSearch")
+					@Html.Partial("SmartListTags")
+					@Html.Partial("SmartListLatestComments")
+					@Html.Partial("SmartListAuthors")
+					@Html.Partial("SmartListCategories")
+					@Html.Partial("SmartArchive")
+				</div>				
+			</div>
+		</div>
+	</section>
+

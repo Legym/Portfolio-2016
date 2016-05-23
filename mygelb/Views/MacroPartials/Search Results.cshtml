@@ -1,0 +1,73 @@
+﻿@using Examine.LuceneEngine.SearchCriteria
+
+@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+    string searchTerm = Request.QueryString["keywords"];
+    if (String.IsNullOrWhiteSpace(searchTerm))
+    {
+        searchTerm = "";
+    }
+
+    var searcher = ExamineManager.Instance;
+    var searchCriteria = searcher.CreateSearchCriteria();
+
+    var query = searchCriteria.GroupedOr(new[] { "body", "nodeName", "name", "title", "bodyText", "seo" }, searchTerm).Compile();
+
+    var searchResults = searcher.Search(query).Where(r => r["__IndexType"] == "content").ToList();
+
+}
+
+@if (searchResults.Any())
+{
+    <ul class="search-results-box">
+        @foreach (var result in searchResults)
+        {
+            var node = Umbraco.TypedContent(result.Id);
+
+            var pathIds = result["__Path"].Split(',');
+
+            var path = Umbraco.TypedContent(pathIds).Where(p => p != null).Select(p => new { p.Name }).ToList();
+
+            <li>
+                <section class="results-box">
+                    <h3>
+                        <a href="@node.Url">@String.Join(" > ", path.Select(p => p.Name))</a>
+                    </h3>
+                    <a href="@node.Url" class="results-url">@node.Url</a>
+
+                    @if (result.Fields.ContainsKey("title"))
+                    {
+                        <p class="results-title"><strong>@result["title"]</strong></p>
+                    }
+
+                    @if (result.Fields.ContainsKey("body"))
+                    {
+                        <p>@result["body"].Truncate(250)</p>
+                    }
+
+                    @* Uncomment this to see all the fields returned in the search
+                        <p>
+                            @foreach (var field in result.Fields)
+                            {
+                                <text>[<strong>@field.Key</strong>]@field.Value<br/></text>
+                            }
+
+                        </p>*@
+                </section>
+                <hr />
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>
+        There are no results matching your search criteria:
+
+        @if (!String.IsNullOrWhiteSpace(searchTerm))
+        {
+            <text>'@searchTerm'</text>
+        }
+    </p>
+}

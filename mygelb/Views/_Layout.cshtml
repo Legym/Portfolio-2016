@@ -20,6 +20,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="~/css/app.min.css">
+	@RenderSection("Styles", false)
+
 </head>
 
 <body>
@@ -30,24 +32,33 @@
                 <div class="small-12 columns">
                     <a id="nav-toggle" href="#menu-mobile"><span></span></a>
 
-                    <nav id="menu-mobile">
-                        @{ Html.RenderPartial("MainNavigation"); }
-                    </nav>
+                    <div class="header-container">
+                        <a href="/" class="logo">
+                            <img src="/media/1001/logo.png" />
+                        </a>
 
-                    <nav id="desktop-menu">
-                        @{ Html.RenderPartial("MainNavigation"); }
-                    </nav>
+                        <nav id="menu-mobile">
+                            @{ Html.RenderPartial("MainNavigation"); }
+                        </nav>
+
+                        <nav id="desktop-menu">
+                            @{ Html.RenderPartial("MainNavigation"); }
+
+                            <div id="searchbox">
+                                <input id="srch-input" class="search-input" placeholder="Site Search" value="" onkeypress="if (event.keyCode == 13) location = '/search-results?Keywords=' + document.getElementById('srch-input').value" />
+
+                                <a href="#" class="search-icon"><img src="/graphics/site-search.png" /></a>
+
+                            </div>
+                        </nav>
+                    </div>
                 </div>
             </div>
 
         </header>
 
-        <main>
-            <div class="row">
-                <div class="small-12 columns">
-                    @RenderBody()
-                </div>
-            </div>
+        <main class="main-content">
+            @RenderBody()
         </main>
 
         <footer>
@@ -60,6 +71,7 @@
     </div>
 
     <!-- Javascripts -->
+	<script type="text/javascript" src="/scripts/Main.SmartBlog.js" async></script>
     <script src="~/scripts/district.js"></script>
 </body>
 </html>

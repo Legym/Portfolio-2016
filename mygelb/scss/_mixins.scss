@@ -1,0 +1,25 @@
+﻿/* Moves two inline-blocks left and right of each other*/
+@mixin inline-block-lr($container,$left,$right){
+    #{$container}{        
+        text-align: justify; 
+
+        &:after{
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            font-size:0;
+            line-height:0;
+        }
+    }
+
+    #{$left} {
+        display: inline-block;
+        vertical-align: middle; 
+    }
+
+    #{$right} {
+        display: inline-block;
+        vertical-align: middle; 
+    }
+}

@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Subpage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "_Layout.cshtml";
+}
+
+@Umbraco.RenderMacro("SearchResults")
+	
+@Umbraco.RenderMacro("Sitemap")

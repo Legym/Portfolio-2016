@@ -2,5 +2,12 @@
 @import "../node_modules/foundation-sites/scss/foundation";
 @include foundation-everything;
 
+@import 'slick';
+@import 'slick-theme';
+
+@import 'mixins';
+
 @import 'global';
 @import 'homepage';
+
+@import 'blog';

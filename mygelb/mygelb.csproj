@@ -344,6 +344,7 @@
     <Content Include="packages.config" />
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="scripts\district.js" />
+    <Content Include="scripts\Main.SmartBlog.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
@@ -377,15 +378,13 @@
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Homepage.cshtml" />
-    <Content Include="Views\Partials\mainNavigation.cshtml" />
+    <Content Include="Views\Partials\header.cshtml" />
     <Content Include="scss\app.scss" />
     <Content Include="scss\_homepage.scss" />
     <Content Include="scss\_global.scss" />
     <Content Include="scss\_settings.scss" />
     <Content Include="scss\_mixins.scss" />
     <Content Include="Views\About.cshtml" />
-    <Content Include="Views\BlogDetail.cshtml" />
-    <Content Include="Views\BlogOverview.cshtml" />
     <Content Include="Views\Contact.cshtml" />
     <Content Include="Views\Portfolio.cshtml" />
     <Content Include="scss\_slick-theme.scss" />
@@ -393,6 +392,24 @@
     <Content Include="Views\MacroPartials\Search Results.cshtml" />
     <Content Include="Views\MacroPartials\Sitemap.cshtml" />
     <Content Include="Views\Subpage.cshtml" />
+    <Content Include="scss\_blog.scss" />
+    <Content Include="Views\SmartBlogArticle.cshtml" />
+    <Content Include="Views\SmartBlogBlog.cshtml" />
+    <Content Include="Views\SmartBlogContent.cshtml" />
+    <Content Include="Views\SmartBlogPage.cshtml" />
+    <Content Include="Views\SmartBlogPost.cshtml" />
+    <Content Include="Views\SmartBlogRSS.cshtml" />
+    <Content Include="Views\Partials\SmartArchive.cshtml" />
+    <Content Include="Views\Partials\SmartBreadcrumb.cshtml" />
+    <Content Include="Views\Partials\SmartListAuthors.cshtml" />
+    <Content Include="Views\Partials\SmartListCategories.cshtml" />
+    <Content Include="Views\Partials\SmartListLatestComments.cshtml" />
+    <Content Include="Views\Partials\SmartListPosts.cshtml" />
+    <Content Include="Views\Partials\SmartListTags.cshtml" />
+    <Content Include="Views\Partials\SmartRSS.cshtml" />
+    <Content Include="Views\Partials\SmartSearch.cshtml" />
+    <Content Include="Views\Partials\SmartShowComments.cshtml" />
+    <Content Include="Views\Partials\SmartShowPost.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -428,6 +445,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\SmartController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

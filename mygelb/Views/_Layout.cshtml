@@ -20,42 +20,12 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="~/css/app.min.css">
-	@RenderSection("Styles", false)
-
 </head>
 
 <body>
     <div id="my-page">
 
-        <header class="header">
-            <div class="row">
-                <div class="small-12 columns">
-                    <a id="nav-toggle" href="#menu-mobile"><span></span></a>
-
-                    <div class="header-container">
-                        <a href="/" class="logo">
-                            <img src="/media/1001/logo.png" />
-                        </a>
-
-                        <nav id="menu-mobile">
-                            @{ Html.RenderPartial("MainNavigation"); }
-                        </nav>
-
-                        <nav id="desktop-menu">
-                            @{ Html.RenderPartial("MainNavigation"); }
-
-                            <div id="searchbox">
-                                <input id="srch-input" class="search-input" placeholder="Site Search" value="" onkeypress="if (event.keyCode == 13) location = '/search-results?Keywords=' + document.getElementById('srch-input').value" />
-
-                                <a href="#" class="search-icon"><img src="/graphics/site-search.png" /></a>
-
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-
-        </header>
+        @Html.Partial("header")
 
         <main class="main-content">
             @RenderBody()

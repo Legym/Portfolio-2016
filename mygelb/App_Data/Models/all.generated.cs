@@ -60,24 +60,6 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
-
-		///<summary>
-		/// Body
-		///</summary>
-		[ImplementPropertyType("body")]
-		public IHtmlString Body
-		{
-			get { return this.GetPropertyValue<IHtmlString>("body"); }
-		}
-
-		///<summary>
-		/// Title
-		///</summary>
-		[ImplementPropertyType("title")]
-		public string Title
-		{
-			get { return this.GetPropertyValue<string>("title"); }
-		}
 	}
 
 	/// <summary>About</summary>
@@ -181,24 +163,6 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Subpage, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Body
-		///</summary>
-		[ImplementPropertyType("body")]
-		public IHtmlString Body
-		{
-			get { return this.GetPropertyValue<IHtmlString>("body"); }
-		}
-
-		///<summary>
-		/// Page Title
-		///</summary>
-		[ImplementPropertyType("pageTitle")]
-		public string PageTitle
-		{
-			get { return this.GetPropertyValue<string>("pageTitle"); }
 		}
 	}
 

@@ -3,25 +3,20 @@
 @using System.Web.Mvc;
 @{
     Layout = "_Layout.cshtml";
-	@section Styles {
-		<link href="@Url.Content("/css/Main.SmartBlog.css")" rel="stylesheet" type="text/css" />
-	}
 }
+<div class="row">
+    <div class="small-9 columns">
+        <div class="lefter">
+            @RenderBody()
+        </div>
+    </div>
 
-	<section class="content">
-		<div class="payload">
-			<div class="smartBlogLeft">
-				@RenderBody()
-				
-				<div class="smartBlogRight">
-					@Html.Partial("SmartSearch")
-					@Html.Partial("SmartListTags")
-					@Html.Partial("SmartListLatestComments")
-					@Html.Partial("SmartListAuthors")
-					@Html.Partial("SmartListCategories")
-					@Html.Partial("SmartArchive")
-				</div>				
-			</div>
-		</div>
-	</section>
-
+    <div class="small-3 columns">
+        @Html.Partial("SmartSearch")
+        @Html.Partial("SmartListTags")
+        @Html.Partial("SmartListLatestComments")
+        @Html.Partial("SmartListAuthors")
+        @Html.Partial("SmartListCategories")
+        @Html.Partial("SmartArchive")
+    </div>
+</div>

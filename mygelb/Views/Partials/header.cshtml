@@ -1,0 +1,39 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+<header class="header">
+    <div class="row">
+        <div class="small-12 columns">
+            <a id="nav-toggle" href="#menu-mobile"><span></span></a>
+            <div class="header-container">
+                <a href="/" class="logo">
+                    <img src="/media/1001/logo.png" />
+                </a>
+                <nav id="menu-mobile">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/About/">About</a></li>
+                        <li><a href="/Portfolio/">Portfolio</a></li>
+                        <li><a href="/Blog/">Blog</a></li>
+                        <li><a href="/Contact/">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <nav id="desktop-menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/About/">About</a></li>
+                        <li><a href="/Portfolio/">Portfolio</a></li>
+                        <li><a href="/Blog/">Blog</a></li>
+                        <li><a href="/Contact/">Contact</a></li>
+                        <li>
+                            <input id="srch-input" class="search-input" placeholder="Site Search" value="" onkeypress="if (event.keyCode == 13) location = '/search-results?Keywords=' + document.getElementById('srch-input').value" />
+                            <a href="#" class="search-icon"><img src="/graphics/site-search.png" /></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+

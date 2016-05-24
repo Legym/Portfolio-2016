@@ -410,6 +410,7 @@
     <Content Include="Views\Partials\SmartSearch.cshtml" />
     <Content Include="Views\Partials\SmartShowComments.cshtml" />
     <Content Include="Views\Partials\SmartShowPost.cshtml" />
+    <Content Include="scss\_fonts.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

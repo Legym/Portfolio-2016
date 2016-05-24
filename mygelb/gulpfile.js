@@ -12,6 +12,7 @@ var uglify       = require('gulp-uglify'); // Pass through Uglification
 var rename       = require('gulp-rename'); // Rename files after compilation
 var autoprefixer = require('gulp-autoprefixer'); // Automatically add CSS prefixes for greater CSS3 browser support
 var notify       = require("gulp-notify"); // Ability to send error notifications
+var beep         = require('beepbeep'); // Make beeping noise if error
 
 // Lint Task
 gulp.task('lint', function() {
@@ -20,27 +21,41 @@ gulp.task('lint', function() {
 		.pipe(jshint.reporter('default'));
 });
 
+// Noise Beep
+var onError = function (err) {
+    notify.onError({
+        title: "Gulp error in " + err.plugin,
+        message: err.toString()
+    })(err);
+    beep(3); // If I'm annoying remove me!!
+    this.emit('end');
+};
+
+
 // Compile Our Sass
 gulp.task('sass', function() {
     gulp.src([
-        'node_modules/foundation-sites/dist/foundation.min.css',
-        'css/jquery.mmenu.all.css',
+        'node_modules/jquery.mmenu/dist/css/jquery.mmenu.all.css',
+        'node_modules/slick-carousel/slick/slick-theme.css',
         'scss/*.scss',
         ])
-        .pipe(plumber())
+        .pipe(plumber({ errorHandler: onError }))
     	.pipe(sass(
         {
             includePaths: [
-    	        'node_modules/foundation-sites/scss/'
+    	        'node_modules/foundation-sites/scss/',
+                'node_modules/font-awesome/scss/',
             ]
         }))
-		//.pipe(notify())
 		.pipe(cssmin())
 		.pipe(autoprefixer({
 		    browsers: ['last 5 versions'],
 		}))
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(sass().on('error', sass.logError))
         .pipe(concat('app.min.css'))
-		.pipe(gulp.dest('css/'));
+		.pipe(gulp.dest('css/'))
+        .pipe(notify({message: 'Sass complilation is complete!', onLast: true}));
 });
 
 
@@ -61,9 +76,9 @@ gulp.task('images', function() {
 gulp.task('scripts', function() {
     gulp.src([
         "js/vendor/jquery-2.2.3.min.js",
-        "js/vendor/jquery.mmenu.all.min.js",
         "node_modules/foundation-sites/dist/foundation.min.js",
-        "js/vendor/slick.min.js",
+        'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/jquery.mmenu/dist/js/jquery.mmenu.all.min.js',
         "js/base.js",
         "js/router.js"
 	])
@@ -72,7 +87,8 @@ gulp.task('scripts', function() {
 		.pipe(rename('district.js'))
 		.pipe(plumber())
 		.pipe(uglify())
-		.pipe(gulp.dest('scripts/'));
+		.pipe(gulp.dest('scripts/'))
+        .pipe(notify({ message: 'JS compilation is complete!', onLast: true }));
 });
 
 

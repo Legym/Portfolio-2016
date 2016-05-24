@@ -1,0 +1,10 @@
+﻿@font-face {
+  font-family: 'fontawesome';
+  font-weight: 400;
+  src: url('/node_modules/font-awesome/fonts/fontawesome-webfont.eot'); /* IE9 Compat Modes */
+  src: url('/node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/node_modules/font-awesome/fonts/fontawesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/node_modules/font-awesome/fonts/fontawesome-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/node_modules/font-awesome/fonts/fontawesome-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/node_modules/font-awesome/fonts/fontawesome-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

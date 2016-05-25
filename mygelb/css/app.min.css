@@ -5037,9 +5037,9 @@ h1, h2 {
   line-height: .75em;
   vertical-align: -15%; }
 
-#desktop-menu, .fa-stack, .logo, header #nav-toggle {
-  display: inline-block;
-  vertical-align: middle; }
+#desktop-menu, .fa-stack, .logo {
+  vertical-align: middle;
+  display: inline-block; }
 
 .fa-2x {
   font-size: 2em; }
@@ -7055,10 +7055,6 @@ h1, h3, h4 {
 .fa-snapchat-square:before {
   content: ""; }
 
-.header-container:after, header #nav-toggle::after {
-  content: '';
-  width: 100%; }
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -7077,6 +7073,10 @@ h1, h3, h4 {
   overflow: visible;
   clip: auto; }
 
+.header-container:after, header #nav-toggle::after {
+  content: '';
+  width: 100%; }
+
 @font-face {
   font-family: fontawesome;
   font-weight: 400;
@@ -7092,39 +7092,13 @@ h1, h3, h4 {
   font-size: 0;
   line-height: 0; }
 
-body {
-  height: 1200px; }
-
-header {
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  width: 100%; }
-
 header #desktop-menu {
   display: none; }
 
-@media screen and (min-width: 40em) {
-  header {
-    background: rgba(253, 250, 246, 0.65);
-    box-shadow: 0 2px 5px 0 rgba(145, 143, 140, 0.2);
-    height: 73px; }
-  header #desktop-menu {
-    display: inline-block;
-    vertical-align: top; }
-  header #desktop-menu ul {
-    padding: 0;
-    margin: 0;
-    line-height: 73px;
-    float: right; }
-  header #desktop-menu ul li {
-    display: inline-block;
-    padding: 0 1.58rem; }
-  header #nav-toggle {
-    display: none; } }
-
 header #nav-toggle {
   position: relative;
+  display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
   width: 20px;
   height: 16px; }
@@ -7138,17 +7112,54 @@ header #nav-toggle::after {
   left: 0;
   box-shadow: 0 7px 0 #0a0a0a,0 14px 0 #0a0a0a; }
 
-.banner, .content {
-  width: 900px;
-  padding: 0;
-  float: left; }
-
 header #nav-toggle:hover::after {
   background: #8a8a8a;
   box-shadow: 0 7px 0 #8a8a8a,0 14px 0 #8a8a8a; }
 
-main {
-  margin-top: 180px; }
+@media screen and (min-width: 64em) {
+  header {
+    background: rgba(253, 250, 246, 0.65);
+    box-shadow: 0 2px 5px 0 rgba(145, 143, 140, 0.2);
+    height: 73px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%; }
+  header #desktop-menu {
+    display: inline-block;
+    vertical-align: top; }
+  header #desktop-menu ul {
+    padding: 0;
+    margin: 0;
+    line-height: 73px;
+    float: right; }
+  header #desktop-menu ul li {
+    display: inline-block;
+    padding: 0 1.58rem; }
+  header #nav-toggle {
+    display: none; }
+  .main-content {
+    margin-top: 180px;
+    min-height: 700px; } }
+
+header #searchbox .search-input {
+  color: #000;
+  display: none;
+  text-align: left; }
+
+header #searchbox .search-icon i {
+  display: inline-block;
+  vertical-align: middle; }
+
+.main-content {
+  background-color: #fff; }
+
+.footer {
+  padding: 40px 0;
+  background-color: #F5F5F5; }
+
+.payload, h1, h2 {
+  padding: 0; }
 
 form {
   display: inline; }
@@ -7158,21 +7169,10 @@ article, aside, figure, footer, header, hgroup, nav, section {
   margin: 0;
   padding: 0; }
 
-.banner {
-  height: 100px;
-  margin: 0;
-  font-size: 25pt;
-  line-height: 100px; }
-
-.content {
-  margin: 0 0 10px;
-  background-color: #fff; }
-
 .payload {
   float: left;
   width: 870px;
   margin: 15px;
-  padding: 0;
   vertical-align: top; }
 
 .smartBlogLeft {
@@ -7192,14 +7192,12 @@ article, aside, figure, footer, header, hgroup, nav, section {
 
 h1 {
   font-size: 16pt;
-  margin: 10px 0 0;
-  padding: 0; }
+  margin: 10px 0 0; }
 
 h2 {
   color: #ff8d00;
   font-size: 14pt;
-  margin: 0;
-  padding: 0; }
+  margin: 0; }
 
 h3 {
   font-size: 12pt;

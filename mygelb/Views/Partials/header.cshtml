@@ -29,8 +29,13 @@
                         <li><a href="/Blog/">Blog</a></li>
                         <li><a href="/Contact/">Contact</a></li>
                         <li>
-                            <input id="srch-input" class="search-input" placeholder="Site Search" value="" onkeypress="if (event.keyCode == 13) location = '/search-results?Keywords=' + document.getElementById('srch-input').value" />
-                            <a href="#" class="search-icon"><img src="/graphics/site-search.png" /></a>
+                            <div id="searchbox">
+                                <input id="srch-input" class="search-input" placeholder="Site Search" value="" onkeypress="if (event.keyCode == 13) location = '/search-results?Keywords=' + document.getElementById('srch-input').value" />
+
+                                <a href="#" class="search-icon">
+                                    <i class="fa fa-lg fa-search"></i>
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </nav>

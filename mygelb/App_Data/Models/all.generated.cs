@@ -686,6 +686,76 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
+	/// <summary>Sitemap</summary>
+	[PublishedContentModel("sitemap")]
+	public partial class Sitemap : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "sitemap";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Sitemap(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Sitemap, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// SiteMapBody
+		///</summary>
+		[ImplementPropertyType("siteMapBody")]
+		public IHtmlString SiteMapBody
+		{
+			get { return this.GetPropertyValue<IHtmlString>("siteMapBody"); }
+		}
+	}
+
+	/// <summary>SearchResults</summary>
+	[PublishedContentModel("searchResults")]
+	public partial class SearchResults : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "searchResults";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public SearchResults(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SearchResults, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// SearchResultsBody
+		///</summary>
+		[ImplementPropertyType("searchResultsBody")]
+		public IHtmlString SearchResultsBody
+		{
+			get { return this.GetPropertyValue<IHtmlString>("searchResultsBody"); }
+		}
+	}
+
 	/// <summary>Folder</summary>
 	[PublishedContentModel("Folder")]
 	public partial class Folder : PublishedContentModel

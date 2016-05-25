@@ -1,3 +1,4 @@
+/// <reference path="C:\Users\Mygel\Documents\Visual Studio 2015\Projects\mygelb\mygelb\js/vendor/footer-reveal.min.js" />
 // Include gulp
 var gulp = require('gulp'); 
 
@@ -79,6 +80,7 @@ gulp.task('scripts', function() {
         "node_modules/foundation-sites/dist/foundation.min.js",
         'node_modules/slick-carousel/slick/slick.min.js',
         'node_modules/jquery.mmenu/dist/js/jquery.mmenu.all.min.js',
+        "js/vendor/footer-reveal.min.js",
         "js/base.js",
         "js/router.js"
 	])

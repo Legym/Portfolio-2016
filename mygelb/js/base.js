@@ -55,6 +55,10 @@
 
 var FEATURES = {
 
+    fancy: function () {
+        $('footer').footerReveal();
+    },
+
     runFoundation: function () {
         $(document).foundation();
 
@@ -94,4 +98,31 @@ var FEATURES = {
             fade: true,
         });
     },
+
+    search: function () {
+        $(document).click(function () {
+            $('#searchbox .search-input').animate({ width: 'hide' }, 300);
+            $('#searchbox .search-icon').unbind('click').bind('click', showSearch);
+        });
+
+        $('#searchbox .search-icon').bind('click', showSearch);
+
+        $('#searchbox .search-input').click(function (ev) {
+            ev.stopPropagation();
+        });
+
+        function showSearch(ev) {
+            $('#searchbox .search-input').animate({ width: 'show' }, 300);
+            $('#searchbox .search-icon').bind('click', executeSearch);
+            ev.stopPropagation();
+        }
+
+        function executeSearch() {
+            var searchvalue = $('#searchbox .search-input').val();
+
+            if ($.trim(searchvalue) !== '') {
+                location.href = '/search/' + searchvalue;
+            }
+        }
+    }
 };

@@ -70,8 +70,10 @@
 		common: {
 		    init: function () {
 		        FEATURES.mmenu();
+		        FEATURES.search();
 		        //FEATURES.homepageSlideshow();
 		        FEATURES.runFoundation();
+		        FEATURES.fancy();
 			}
 		},
 	};

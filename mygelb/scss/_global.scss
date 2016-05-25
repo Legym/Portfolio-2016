@@ -1,25 +1,21 @@
 @include inline-block-lr('.header-container', '#desktop-menu', '.logo');
 
-body {
-    height: 1200px;
-}
-
 header {
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    width: 100%;
 
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
         background: rgba(253, 250, 246, .65);
         box-shadow: 0 2px 5px 0 rgba(145, 143, 140, .2);
         height: 73px;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        width: 100%;
     }
 
     #desktop-menu {
         display: none;
     
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
            display: inline-block;
            vertical-align: top;
 
@@ -39,12 +35,38 @@ header {
     
     #nav-toggle {
         @include hamburger;
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             display: none;
         }
     }
+
+    #searchbox {
+
+		.search-input {
+			color: black;
+			display: none;
+			text-align: left;
+		}
+
+		.search-icon i {
+			display: inline-block;
+            vertical-align: middle;
+		}						
+	}				    																														
 }
 
-main {
-    margin-top: 180px;
+.main-content {
+    background-color: white;
+
+    @include breakpoint(large) {
+        margin-top: 180px;
+        min-height: 700px;
+    }
+    
 }
+
+.footer {
+    padding: 40px 0;
+    background-color: #F5F5F5;
+}
+

@@ -23,25 +23,20 @@
 </head>
 
 <body>
-    <div id="my-page">
+    <div class="subpage">
 
-        @Html.Partial("header")
+        @Html.Partial("Header")
 
         <main class="main-content">
             @RenderBody()
         </main>
 
-        <footer>
-            <div class="row">
-                <div class="small-12 columns">
+        @Html.Partial("Footer")
 
-                </div>
-            </div>
-        </footer>
     </div>
 
     <!-- Javascripts -->
-	<script type="text/javascript" src="/scripts/Main.SmartBlog.js" async></script>
+	@*<script type="text/javascript" src="/scripts/Main.SmartBlog.js" async></script>*@
     <script src="~/scripts/district.js"></script>
 </body>
 </html>

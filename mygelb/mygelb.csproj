@@ -331,16 +331,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\app.min.css" />
-    <Content Include="css\jquery.mmenu.all.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\slick.svg" />
     <Content Include="gulpfile.js" />
     <Content Include="js\base.js" />
     <Content Include="js\router.js" />
+    <Content Include="js\vendor\footer-reveal.min.js" />
     <Content Include="js\vendor\jquery-2.2.3.min.js" />
-    <Content Include="js\vendor\jquery.mmenu.all.min.js" />
     <Content Include="js\vendor\parallax.min.js" />
-    <Content Include="js\vendor\slick.min.js" />
     <Content Include="packages.config" />
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="scripts\district.js" />
@@ -372,13 +369,11 @@
     <Content Include="Config\applications.config" />
     <Content Include="Config\404handlers.config" />
     <Content Include="package.json" />
-    <Content Include="fonts\slick.eot" />
-    <Content Include="fonts\slick.ttf" />
-    <Content Include="fonts\slick.woff" />
+    <Content Include="Config\SmartBlog.config" />
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Homepage.cshtml" />
-    <Content Include="Views\Partials\header.cshtml" />
+    <Content Include="Views\Partials\Header.cshtml" />
     <Content Include="scss\app.scss" />
     <Content Include="scss\_homepage.scss" />
     <Content Include="scss\_global.scss" />
@@ -387,8 +382,6 @@
     <Content Include="Views\About.cshtml" />
     <Content Include="Views\Contact.cshtml" />
     <Content Include="Views\Portfolio.cshtml" />
-    <Content Include="scss\_slick-theme.scss" />
-    <Content Include="scss\_slick.scss" />
     <Content Include="Views\MacroPartials\Search Results.cshtml" />
     <Content Include="Views\MacroPartials\Sitemap.cshtml" />
     <Content Include="Views\Subpage.cshtml" />
@@ -411,6 +404,8 @@
     <Content Include="Views\Partials\SmartShowComments.cshtml" />
     <Content Include="Views\Partials\SmartShowPost.cshtml" />
     <Content Include="scss\_fonts.scss" />
+    <Content Include="Views\SearchResults.cshtml" />
+    <Content Include="Views\Sitemap.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -455,6 +450,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

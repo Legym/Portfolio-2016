@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+	<info>
+		<package>
+			<name>Nested Content</name>
+			<version>0.2.0</version>
+			<license url="http://opensource.org/licenses/MIT">MIT license</license>
+			<url>https://github.com/leekelleher/umbraco-nested-content</url>
+			<requirements>
+				<major>7</major>
+				<minor>1</minor>
+				<patch>4</patch>
+			</requirements>
+		</package>
+		<author>
+			<name>Matt Brailsford, Lee Kelleher</name>
+			<website>https://github.com/leekelleher/umbraco-nested-content/graphs/contributors</website>
+		</author>
+		<readme><![CDATA[Nested Content is a list editing property editor for Umbraco 7.1+]]></readme>
+	</info>
+
+	<DocumentTypes />
+	<Templates />
+	<Stylesheets />
+	<Macros />
+	<DictionaryItems />
+	<Languages />
+	<DataTypes />
+
+	<Actions />
+
+	<control />
+
+	<files><file><guid>a76c6c8f-7e22-4d7f-a812-5e1443e4c72e.css</guid><orgPath>/App_Plugins/NestedContent/Css</orgPath><orgName>nestedcontent.css</orgName></file><file><guid>b8b2334e-45b6-463b-89b0-a0e0c996878f.js</guid><orgPath>/App_Plugins/NestedContent/Js</orgPath><orgName>nestedcontent.controllers.js</orgName></file><file><guid>57b0dd51-efe1-4a6c-8868-de8c83e11f62.js</guid><orgPath>/App_Plugins/NestedContent/Js</orgPath><orgName>nestedcontent.directives.js</orgName></file><file><guid>2e3e30dd-ea22-4ed3-84aa-f00b0f807dbd.js</guid><orgPath>/App_Plugins/NestedContent/Js</orgPath><orgName>nestedcontent.resources.js</orgName></file><file><guid>240b5c0a-5f75-4726-8cd8-ffdec4eb2747.js</guid><orgPath>/App_Plugins/NestedContent/Js</orgPath><orgName>nestedcontent.services.js</orgName></file><file><guid>67235ce4-e798-4784-bf7c-f11a2a4ad041.manifest</guid><orgPath>/App_Plugins/NestedContent</orgPath><orgName>package.manifest</orgName></file><file><guid>6bc0d9e5-3755-4ebb-8d74-fdf661626f9c.html</guid><orgPath>/App_Plugins/NestedContent/Views</orgPath><orgName>nestedcontent.doctypepicker.html</orgName></file><file><guid>82158260-c11a-4d41-9e9e-4ca54a3af42c.html</guid><orgPath>/App_Plugins/NestedContent/Views</orgPath><orgName>nestedcontent.editor.html</orgName></file><file><guid>a5536ccd-bbda-4797-907f-85bb82b0b5d9.html</guid><orgPath>/App_Plugins/NestedContent/Views</orgPath><orgName>nestedcontent.html</orgName></file><file><guid>a00040df-21ad-460a-94c7-6d930b7a8859.dll</guid><orgPath>/bin</orgPath><orgName>Our.Umbraco.NestedContent.dll</orgName></file></files>
+
+</umbPackage>

@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="~/css/app.min.css">
 </head>
 
-<body>
+<body class="@RenderSection("BodyClass", false)">
     <div class="subpage">
 
         @Html.Partial("Header")

@@ -406,6 +406,7 @@
     <Content Include="scss\_fonts.scss" />
     <Content Include="Views\SearchResults.cshtml" />
     <Content Include="Views\Sitemap.cshtml" />
+    <Content Include="Views\Partials\Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

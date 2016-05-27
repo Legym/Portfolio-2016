@@ -1,5 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.About>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "_Layout.cshtml";
+    Layout = "_Layout.cshtml";
+
+    @section BodyClass {subpage-about}
 }

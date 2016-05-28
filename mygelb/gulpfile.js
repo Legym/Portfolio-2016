@@ -37,6 +37,7 @@ var onError = function (err) {
 gulp.task('sass', function() {
     gulp.src([
         'node_modules/jquery.mmenu/dist/css/jquery.mmenu.all.css',
+        'node_modules/slick-carousel/slick/slick.css',
         'node_modules/slick-carousel/slick/slick-theme.css',
         'scss/*.scss',
         ])

@@ -60,6 +60,15 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
+
+		///<summary>
+		/// HomePageSlideShow
+		///</summary>
+		[ImplementPropertyType("homePageSlideShow")]
+		public object HomePageSlideShow
+		{
+			get { return this.GetPropertyValue("homePageSlideShow"); }
+		}
 	}
 
 	/// <summary>About</summary>
@@ -163,6 +172,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Subpage, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// HomePageSlideShow
+		///</summary>
+		[ImplementPropertyType("homePageSlideShow")]
+		public string HomePageSlideShow
+		{
+			get { return this.GetPropertyValue<string>("homePageSlideShow"); }
 		}
 	}
 
@@ -753,6 +771,50 @@ namespace Umbraco.Web.PublishedContentModels
 		public IHtmlString SearchResultsBody
 		{
 			get { return this.GetPropertyValue<IHtmlString>("searchResultsBody"); }
+		}
+	}
+
+	/// <summary>Slide</summary>
+	[PublishedContentModel("slide")]
+	public partial class Slide : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "slide";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Slide(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Slide, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Image: An image that will be displayed as the masthead on the frontpage
+		///</summary>
+		[ImplementPropertyType("slideBanner")]
+		public object SlideBanner
+		{
+			get { return this.GetPropertyValue("slideBanner"); }
+		}
+
+		///<summary>
+		/// Title
+		///</summary>
+		[ImplementPropertyType("title")]
+		public string Title
+		{
+			get { return this.GetPropertyValue<string>("title"); }
 		}
 	}
 

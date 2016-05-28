@@ -1,1 +1,15 @@
-﻿
+﻿.subpage-homepage {
+
+    .homepage-slideshow {
+
+        .slick-prev {
+            left: 25px;
+            z-index: 2;
+        }
+
+        .slick-next {
+            right: 25px;
+            z-index: 2;
+        }
+    }
+}

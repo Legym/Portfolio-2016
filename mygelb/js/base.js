@@ -89,7 +89,7 @@ var FEATURES = {
     },
 
     homepageSlideshow: function() {
-        $('.slider').slick({
+        $('.homepage-slideshow').slick({
             arrows: true,
             dots: true,
             infinite: true,
@@ -97,6 +97,8 @@ var FEATURES = {
             slidesToShow: 1,
             fade: true,
         });
+
+        console.log('lol');
     },
 
     search: function () {

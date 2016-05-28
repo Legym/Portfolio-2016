@@ -61,6 +61,10 @@ header {
     @include breakpoint(large) {
         margin-top: 180px;
         min-height: 700px;
+
+        .subpage-homepage & {
+            margin: 0;
+        }
     }
     
 }

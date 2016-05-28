@@ -1,13 +1,26 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Homepage>
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
     Layout = "_Layout.cshtml";
-
     @section BodyClass {subpage-homepage}
+
+    var items = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("HomePageSlideShow");
+
 }
 
-<div class="row">
-    <div class="small-12 columns">
-        
-    </div>
+
+<div class="homepage-slideshow">
+    @foreach (var item in items) {
+        var bannerId = Umbraco.Media(@item.GetPropertyValue("slideBanner")); //banner.image is the property id.
+        var bannerUrl = bannerId.Url;
+
+        <div class="masthead" style="background-image:url('@bannerUrl'); background-size: cover; height: 800px;">
+            <div class="col-xs-12 col-md-10">
+                <div class="slide-text">
+                    @item.GetPropertyValue("title")
+                </div>
+            </div>
+        </div>
+    }
 </div>

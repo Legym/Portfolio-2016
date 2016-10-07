@@ -45,11 +45,14 @@
 // 1. Global
 // ---------
 
+$primary-color: #07a1f2;
+
+
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
+  primary: #07a1f2,
   secondary: #777,
   success: #3adb76,
   warning: #ffae00,

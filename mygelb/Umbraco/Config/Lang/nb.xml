@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <language alias="no" intName="Norwegian" localName="norsk" lcid="20" culture="nb-NO">
   <creator>
     <name>The Umbraco community</name>
@@ -390,8 +390,7 @@
     <key alias="showPageOnSend">Hvilken side skal vises etter at skjemaet er sendt</key>
     <key alias="size">Størrelse</key>
     <key alias="sort">Sorter</key>
-    <key alias="submit">Submit</key>
-    <!-- TODO: Translate this -->
+    <key alias="submit">Submit</key> <!-- TODO: Translate this -->
     <key alias="type">Type</key>
     <key alias="typeToSearch">Søk...</key>
     <key alias="up">Opp</key>
@@ -794,12 +793,15 @@ Vennlig hilsen Umbraco roboten
     <key alias="addElement">Legg til innhold</key>
     <key alias="dropElement">Slipp innhold</key>
     <key alias="settingsApplied">Raden har tilpasset design</key>
+
     <key alias="contentNotAllowed">Innholdstypen er ikke tillatt her</key>
     <key alias="contentAllowed">Innholdstypen er tillatt her</key>
+
     <key alias="clickToEmbed">Klikk for å bygge inn</key>
     <key alias="clickToInsertImage">Klikk for å sette inn et bilde</key>
     <key alias="placeholderImageCaption">Bildetekst...</key>
     <key alias="placeholderWriteHere">Skriv her...</key>
+    
     <key alias="gridLayouts">Rutenettoppsett</key>
     <key alias="gridLayoutsDetail">Et oppsett er det overordnede arbeidsområdet til ditt rutenett - du vil typisk kun behøve ett eller to</key>
     <key alias="addGridLayout">Legg til rutenettoppsett</key>
@@ -808,13 +810,18 @@ Vennlig hilsen Umbraco roboten
     <key alias="rowConfigurationsDetail">Rader er forhåndsdefinerte celler arrangert vannrett</key>
     <key alias="addRowConfiguration">Legg til radkonfigurasjon</key>
     <key alias="addRowConfigurationDetail">Juster raden ved å sette cellebredder og legge til flere celler</key>
+
     <key alias="columns">Kolonner</key>
     <key alias="columnsDetails">Totalt antall kolonner i rutenettet</key>
+    
     <key alias="settings">Innstillinger</key>
     <key alias="settingsDetails">Konfigurer hvilke innstillinger brukeren kan endre</key>
+
     <key alias="styles">Stiler</key>
     <key alias="stylesDetails">Konfigurer hvilke stiler redaktørene kan endre</key>
+
     <key alias="settingDialogDetails">Innstillingene lagres kun når konfigurasjonen er gyldig</key>
+    
     <key alias="allowAllEditors">Tillatt alle editorer</key>
     <key alias="allowAllRowConfigurations">Tillat alle radkonfigurasjoner</key>
     <key alias="setAsDefault">Bruk som standard</key>

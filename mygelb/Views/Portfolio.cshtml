@@ -1,7 +1,57 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Portfolio>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
+
 @{
     Layout = "_Layout.cshtml";
 
+    var projects = CurrentPage.Descendants().OrderBy("CreateDate desc");
+
+    var m = Umbraco.Media(CurrentPage.Image);
+
+    var node = Umbraco.Content(1075);
+
     @section BodyClass {subpage-portfolio}
 }
+
+<section class="portfolio-intro">
+    <div class="parallax-wrapper">
+        <span data-bg="@m.Url" class="hidden"></span>
+        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
+            <div class="row">
+                <div class="parallax-content">
+                    <h2>Projects</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-padding project-content project-preview">
+    <div class="row">
+
+        @Html.Partial("Breadcrumbs")
+
+        <div class="small-12 columns">
+            @{foreach (var project in node.Children.Where("Visible"))
+                {
+                    var projectId = Umbraco.Media(project.GetPropertyValue("projectImage"));
+                    var bannerUrl = projectId.Url;
+
+                    <div class="project-container height">
+                        <figure class="effect-lily">
+                            <img src="@bannerUrl" alt="@project.title" />
+                            <figcaption>
+                                <div>
+                                    @*<h2>@project.title</h2>*@
+                                    @*<p>@project.Caption</p>*@
+                                </div>
+                                <a href="@project.Url">View more</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+

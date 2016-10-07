@@ -1,3 +1,4 @@
+/// <reference path="C:\Users\Mygel\Documents\Visual Studio 2015\Projects\UmbracoTemplate\UmbracoTemplate\js/vendor/jssocials.min.js" />
 /// <reference path="C:\Users\Mygel\Documents\Visual Studio 2015\Projects\mygelb\mygelb\js/vendor/footer-reveal.min.js" />
 // Include gulp
 var gulp = require('gulp'); 
@@ -6,14 +7,46 @@ var gulp = require('gulp');
 var plumber      = require('gulp-plumber'); // To handle error events
 var jshint       = require('gulp-jshint'); // To show JS errors
 var cssmin       = require('gulp-cssmin'); // Minify
-var imagemin     = require('gulp-imagemin'); // Image Minification
+//var imagemin     = require('gulp-imagemin'); // Image Minification
 var sass         = require('gulp-sass'); // Compile our Sass
 var concat       = require('gulp-concat'); // Concatinate JS
 var uglify       = require('gulp-uglify'); // Pass through Uglification
 var rename       = require('gulp-rename'); // Rename files after compilation
 var autoprefixer = require('gulp-autoprefixer'); // Automatically add CSS prefixes for greater CSS3 browser support
 var notify       = require("gulp-notify"); // Ability to send error notifications
-var beep         = require('beepbeep'); // Make beeping noise if error
+var beep = require('beepbeep'); // Make beeping noise if error
+
+const imagemin = require('gulp-imagemin');
+
+
+
+
+/* Move files from node_modules to proper destination*/
+/* Run `Gulp pip` after npm install*/
+gulp.task('pip-css', function() {
+    gulp.src([
+        'node_modules/jquery.mmenu/dist/css/jquery.mmenu.all.css',
+    ])
+        .pipe(gulp.dest('css/'));
+});
+
+gulp.task('pip-sass', function () {
+    gulp.src([
+        'node_modules/slick-carousel/slick/*.scss',
+
+    ])
+        .pipe(gulp.dest('scss/'));
+});
+
+gulp.task('pip-fonts', function () {
+    gulp.src([
+        'node_modules/font-awesome/fonts/*',
+        'node_modules/slick-carousel/slick/fonts/*'
+    ])
+        .pipe(gulp.dest('fonts/'));
+});
+
+
 
 // Lint Task
 gulp.task('lint', function() {
@@ -36,9 +69,10 @@ var onError = function (err) {
 // Compile Our Sass
 gulp.task('sass', function() {
     gulp.src([
-        'node_modules/jquery.mmenu/dist/css/jquery.mmenu.all.css',
-        'node_modules/slick-carousel/slick/slick.css',
-        'node_modules/slick-carousel/slick/slick-theme.css',
+        'css/jquery.mmenu.all.css',
+        'css/jssocials-theme-flat.css',
+        'css/jssocials.css',
+        'css/jquery.fancybox.css',
         'scss/*.scss',
         ])
         .pipe(plumber({ errorHandler: onError }))
@@ -63,36 +97,36 @@ gulp.task('sass', function() {
 
 // Compresses Images
 gulp.task('images', function() {
-	gulp.src([
-		'media/*',
-	])
-		.pipe(imagemin({
-			progressive: true,
-			interlaced: true,
-			svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
-		}))
-		.pipe(gulp.dest('media'))
+    gulp.src('media/**')
+        .pipe(imagemin())
+        .pipe(gulp.dest('media'))
 });
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     gulp.src([
-        "js/vendor/jquery-2.2.3.min.js",
         "node_modules/foundation-sites/dist/foundation.min.js",
         'node_modules/slick-carousel/slick/slick.min.js',
         'node_modules/jquery.mmenu/dist/js/jquery.mmenu.all.min.js',
-        "js/vendor/footer-reveal.min.js",
+        "js/vendor/parallax.min.js",
+        "js/vendor/jssocials.min.js",
+        "js/vendor/jquery.matchHeight-min.js",
+        "js/vendor/jquery.fancybox.pack.js",
         "js/base.js",
         "js/router.js"
 	])
 		.pipe(plumber())
 		.pipe(concat('all.js'))
-		.pipe(rename('district.js'))
+		.pipe(rename('mygelb.js'))
 		.pipe(plumber())
 		.pipe(uglify())
 		.pipe(gulp.dest('scripts/'))
         .pipe(notify({ message: 'JS compilation is complete!', onLast: true }));
 });
+
+
+// Pip
+gulp.task('pip', ['pip-sass', 'pip-css', 'pip-fonts']);
 
 
 // Watch Files For Changes

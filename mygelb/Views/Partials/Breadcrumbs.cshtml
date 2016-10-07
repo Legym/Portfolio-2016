@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+
+
+<div class="small-12 columns">
+    <nav aria-label="You are here:" role="navigation">
+        <ul class="breadcrumbs">
+            @foreach (var ancestor in Model.Content.Ancestors().Where(t => t.IsVisible()))
+            {
+                <li><a href="@ancestor.Url">@ancestor.Name</a></li>
+            }
+                <li>@Model.Content.Name</li>
+        </ul>
+    </nav>
+</div>

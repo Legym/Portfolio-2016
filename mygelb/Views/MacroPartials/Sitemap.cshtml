@@ -11,7 +11,7 @@
        
         @if (node.Children.Any(n => n.TemplateId > 0 ))
         {
-            <ul class="disc">
+            <ul class="test">
                 @foreach (var n in node.Children.Where(n => n.TemplateId > 0 && !n.GetPropertyValue<bool>("hideFromSitemap")))
                 {
                     @Traverse(n, pad + 8)

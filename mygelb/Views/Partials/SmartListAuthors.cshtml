@@ -6,10 +6,10 @@
     IPublishedContent objBlogRoot = Model.Content.AncestorOrSelf("SmartBlogBlog");
     // Get the posts in this blog
     IEnumerable<IPublishedContent> colPosts = objBlogRoot.Descendants("SmartBlogPost");
-    
+
     //List of authors
     List<String> colAuthors = new List<String>();
-    
+
     // Loop through the posts to retrieve the authors and generate a list without duplicating them.
     foreach (IPublishedContent objPost in colPosts)
     {
@@ -28,12 +28,16 @@
             colAuthors.Add(strAuthor);
         }
     }
-    
-    <span class="smartSubTitle smartTopBorder">Authors</span><br />
-    
-    // Loop through the generated authors list and add them tothe page
-    foreach (String strAuthor in colAuthors)
-    {
-        <a href="@Umbraco.NiceUrl(objBlogRoot.Id)?author=@strAuthor">@strAuthor</a><br />
-    }
+
+    <div class="sidebar-authors">
+        <span class="smartSubTitle">Authors</span>
+        <ul>
+            @foreach (String strAuthor in colAuthors)
+            {
+            <li>
+                <a href="@Umbraco.NiceUrl(objBlogRoot.Id)?author=@strAuthor">@strAuthor</a>
+            </li>
+            }
+        </ul>
+    </div>
 }

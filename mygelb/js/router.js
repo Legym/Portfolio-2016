@@ -71,10 +71,110 @@
 		    init: function () {
 		        FEATURES.mmenu();
 		        FEATURES.search();
-		        FEATURES.homepageSlideshow();
 		        FEATURES.runFoundation();
-		        FEATURES.fancy();
+		        FEATURES.toTop();
+		        FEATURES.matchHeight();
+		        FEATURES.currentPage();
+		        FEATURES.fancybox();
+		        FEATURES.hireMe();
 			}
+		},
+
+		subpage_homepage: {
+		    init: function () {
+		        FEATURES.homepageSlideshow();
+		        FEATURES.staticSlider('.homepage-static-slider', 3);
+		        FEATURES.parallax(
+                    ".homepage-message .parallax-wrapper > .parallax-window",
+                    ".homepage-message .parallax-wrapper > span[data-bg]"
+	            )
+		        FEATURES.parallax(
+                    "#explore .parallax-wrapper > .parallax-window",
+                    "#explore .parallax-wrapper > span[data-bg]"
+	            )
+		    }
+		},
+
+		subpage_blog: {
+		    init: function () {
+		        FEATURES.parallax(
+                    "#blog-overview-image .parallax-wrapper > .parallax-window",
+                    "#blog-overview-image .parallax-wrapper > span[data-bg]"
+	            )
+		        FEATURES.blogOvSidebar();
+		        FEATURES.blogOvSticky();
+		        FEATURES.blogSocialMedia();
+		    }
+		},
+
+		subpage_about: {
+		    init: function () {
+		        FEATURES.mapCover();
+		        FEATURES.instagramSlider(".instagram-slide");
+		        FEATURES.parallax(
+                    "#about-image .parallax-wrapper > .parallax-window",
+                    "#about-image .parallax-wrapper > span[data-bg]"
+	            )
+		        FEATURES.parallax(
+                    "#experience .parallax-wrapper > .parallax-window",
+                    "#experience .parallax-wrapper > span[data-bg]"
+	            )
+		    }
+		},
+
+		subpage_portfolio: {
+		    init: function () {
+		        FEATURES.parallax(
+                    ".parallax-wrapper > .parallax-window",
+                    ".parallax-wrapper > span[data-bg]"
+	            )
+		    }
+		},
+
+		subpage_project: {
+		    init: function () {
+		        FEATURES.parallax(
+                    ".parallax-wrapper > .parallax-window",
+                    ".parallax-wrapper > span[data-bg]"
+	            )
+		        FEATURES.projectSlideshow();
+		    }
+		},
+
+		subpage_sitemap: {
+		    init: function () {
+		        FEATURES.parallax(
+                    ".parallax-wrapper > .parallax-window",
+                    ".parallax-wrapper > span[data-bg]"
+	            )
+		    }
+		},
+
+		subpage_contact: {
+		    init: function () {
+		        FEATURES.parallax(
+                    ".parallax-wrapper > .parallax-window",
+                    ".parallax-wrapper > span[data-bg]"
+	            )
+		    }
+		},
+
+		subpage_search: {
+		    init: function () {
+		        FEATURES.parallax(
+                    ".parallax-wrapper > .parallax-window",
+                    ".parallax-wrapper > span[data-bg]"
+	            )
+		    }
+		},
+
+		subpage_newsletter: {
+		    init: function () {
+		        FEATURES.parallax(
+                    ".parallax-wrapper > .parallax-window",
+                    ".parallax-wrapper > span[data-bg]"
+	            )
+		    }
 		},
 	};
 

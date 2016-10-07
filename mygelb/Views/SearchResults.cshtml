@@ -1,7 +1,31 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.SearchResults>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "_Layout.cshtml";
+    Layout = "_Layout.cshtml";
+
+    var m = Umbraco.Media(CurrentPage.image);
+
+    @section BodyClass {subpage-search}
 }
 
-@Umbraco.RenderMacro("SearchResults")
+
+<section class="portfolio-intro">
+    <div class="parallax-wrapper">
+        <span data-bg="@m.Url" class="hidden"></span>
+        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
+            <div class="row">
+                <div class="parallax-content">
+                    <h2>@Model.Content.Name</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-intro content-padding">
+    <div class="row">
+        <div class="medium-12 columns">
+            @Umbraco.RenderMacro("SearchResults")
+        </div>
+    </div>
+</section>

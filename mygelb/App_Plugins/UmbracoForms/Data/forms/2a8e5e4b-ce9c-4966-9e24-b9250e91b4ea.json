@@ -1,0 +1,78 @@
+{
+  "name": "Newsletter",
+  "created": "2016-06-07T02:59:00.2525889-07:00",
+  "pages": [
+    {
+      "fieldSets": [
+        {
+          "caption": "Sign up to keep up with my adventures! Your privacy is important and will not be sold or spammed.",
+          "sortOrder": 0,
+          "id": "b19bffa8-d629-4151-be67-65f114ca9540",
+          "page": "00000000-0000-0000-0000-000000000000",
+          "containers": [
+            {
+              "caption": null,
+              "width": 12,
+              "fields": [
+                {
+                  "caption": "Email Address",
+                  "tooltip": "",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "emailAddress",
+                  "id": "2730a50a-72bb-448b-9a2a-2ae815dc4500",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": "",
+                    "Placeholder": "Email Address"
+                  },
+                  "preValues": []
+                }
+              ]
+            }
+          ],
+          "condition": null
+        }
+      ],
+      "caption": "Newsletter",
+      "sortOrder": 0,
+      "id": "00000000-0000-0000-0000-000000000000",
+      "form": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "id": "2a8e5e4b-ce9c-4966-9e24-b9250e91b4ea",
+  "fieldIndicationType": "MarkMandatoryFields",
+  "indicator": "",
+  "showValidationSummary": false,
+  "hideFieldValidation": false,
+  "requiredErrorMessage": "{0} is mandatory",
+  "invalidErrorMessage": "{0} is not valid",
+  "messageOnSubmit": "Thank you for subscribing! You're awesome!",
+  "goToPageOnSubmit": 0,
+  "xPathOnSubmit": null,
+  "manualApproval": false,
+  "storeRecordsLocally": true,
+  "cssClass": null,
+  "disableDefaultStylesheet": false,
+  "useClientDependency": false,
+  "workflows": [
+    "e5582146-9f9f-46c5-8add-0d69c55cf8a0"
+  ],
+  "datasource": null,
+  "submitLabel": "Submit",
+  "nextLabel": "Next",
+  "prevLabel": "Previous"
+}

@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Newsletter>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "_Layout.cshtml";
+
+    var m = Umbraco.Media(CurrentPage.Image);
+
+    @section BodyClass {subpage-newsletter}
+}
+
+<section class="Newsletter-intro">
+    <div class="parallax-wrapper">
+        <span data-bg="@m.Url" class="hidden"></span>
+        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
+            <div class="row">
+                <div class="parallax-content">
+                    <h2>@Model.Content.Name Signup</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="Newsletter-body content-padding">
+    <div class="row">
+
+        @Html.Partial("Breadcrumbs")
+
+        <div class="small-12 medium-10 medium-centered columns">
+            @Umbraco.RenderMacro("FormsRenderForm", new { FormGuid = "2a8e5e4b-ce9c-4966-9e24-b9250e91b4ea" })
+        </div>
+    </div>
+</section>

@@ -29,7 +29,7 @@ namespace SmartBlog
                     {"smartBlogName", HttpUtility.UrlDecode(Model.strName)},
                     {"smartBlogEmail", HttpUtility.UrlDecode(Model.strEmail)},
                     {"smartBlogWebsite", HttpUtility.UrlDecode(Model.strWebsite)},
-                    {"smartBlogComment", HttpUtility.UrlDecode(Model.strComment)}
+                    {"smartBlogComment1", HttpUtility.UrlDecode(Model.strComment)}
                 };
 
             SmartBlogLibraries.Helpers.Cms.CreateContent(Model.strName, "SmartBlogComment", Model.intId, colProperties, blnAutoApproveComments);

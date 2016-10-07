@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <language alias="ru" intName="Russian" localName="русский" lcid="" culture="ru-RU">
   <creator>
     <name>The Umbraco community</name>
@@ -189,37 +189,50 @@
     <key alias="inheritedFrom">Унаследован от</key>
     <key alias="addProperty">Добавить свойство</key>
     <key alias="requiredLabel">Обязательная метка</key>
+
     <key alias="enableListViewHeading">Представление в формате списка</key>
     <key alias="enableListViewDescription">Устанавливает представление документа данного типа в виде сортируемого списка дочерних документов с функцией поиска, в отличие от обычного представления дочерних документов в виде дерева</key>
+
     <key alias="allowedTemplatesHeading">Допустимые шаблоны</key>
     <key alias="allowedTemplatesDescription">Выберите перечень допустимых шаблонов для сопоставления документам данного типа</key>
     <key alias="allowAsRootHeading">Разрешить в качестве корневого</key>
     <key alias="allowAsRootDescription">Позволяет создавать документы этого типа в самом корне дерева содержимого</key>
     <key alias="allowAsRootCheckbox">ДА - разрешить создание в качестве корневого</key>
+
     <key alias="childNodesHeading">Допустимые типы дочерних документов</key>
     <key alias="childNodesDescription">Позволяет указать перечень типов документов, допустимых для создания документов, дочерних к данному типу</key>
+
     <key alias="chooseChildNode">Выбрать дочерний узел</key>
     <key alias="compositionsDescription">Унаследовать вкладки и свойства из уже существующего типа документов. Вкладки будут либо добавлены в создаваемый тип, либо в случае совпадения названий вкладок будут добавлены наследуемые свойства.</key>
     <key alias="compositionInUse">Этот тип документов уже участвует в композиции другого типа, поэтому сам не может быть композицией.</key>
     <key alias="noAvailableCompositions">В настоящее время нет типов документов, допустимых для построения композиции.</key>
+
     <key alias="availableEditors">Доступные редакторы</key>
     <key alias="reuse">Переиспользовать</key>
     <key alias="editorSettings">Установки редактора</key>
+
     <key alias="configuration">Конфигурирование</key>
+
     <key alias="yesDelete">ДА, удалить</key>
+
     <key alias="movedUnderneath">была перемещена внутрь</key>
     <key alias="folderToMove">Выбрать папку для перемещения</key>
     <key alias="structureBelow">в структуре дерева</key>
+
     <key alias="allDocumentTypes">Все типы документов</key>
     <key alias="allDocuments">Все документы</key>
     <key alias="allMediaItems">Все медиа-элементы</key>
+
     <key alias="usingThisDocument">, использующие этот тип документов, будут безвозвратно удалены, пожалуйста, подтвердите это действие.</key>
     <key alias="usingThisMedia">, использующие этот тип медиа, будут безвозвратно удалены, пожалуйста, подтвердите это действие.</key>
     <key alias="usingThisMember">, использующие этот тип участников, будут безвозвратно удалены, пожалуйста, подтвердите это действие.</key>
+
     <key alias="andAllDocuments">и все документы, использующие данный тип</key>
     <key alias="andAllMediaItems">и все медиа-элементы, использующие данный тип</key>
     <key alias="andAllMembers">и все участники, использующие данный тип</key>
+
     <key alias="thisEditorUpdateSettings">, использующие этот редактор, будут обновлены с применением этих установок</key>
+
     <key alias="memberCanEdit">Участник может изменить</key>
     <key alias="showOnMemberProfile">Показать в профиле участника</key>
     <key alias="tabHasNoSortOrder">для вкладки не указан порядок сортировки</key>
@@ -289,13 +302,18 @@
     <key alias="treepicker">Выберите элемент</key>
     <key alias="viewCacheItem">Просмотр элемента кэша</key>
     <key alias="createFolder">Создать папку...</key>
+
     <key alias="relateToOriginalLabel">Связать с оригиналом</key>
     <key alias="theFriendliestCommunity">Самое дружелюбное сообщество</key>
+
     <key alias="linkToPage">Ссылка на страницу</key>
+
     <key alias="openInNewWindow">Открывает документ по ссылке в новом окне или вкладке браузера</key>
     <key alias="openInFullBody">Открывает документ по ссылке в полноэкранном режиме</key>
     <key alias="openInParentFrame">Открывает документ по ссылке в родительском фрейме</key>
+
     <key alias="linkToMedia">Ссылка на медиа-файл</key>
+
     <key alias="selectMedia">Выбрать медиа</key>
     <key alias="selectIcon">Выбрать значок</key>
     <key alias="selectItem">Выбрать элемент</key>
@@ -304,14 +322,19 @@
     <key alias="selectContent">Выбрать содержимое</key>
     <key alias="selectMember">Выбрать участника</key>
     <key alias="selectMemberGroup">Выбрать группу участников</key>
+
     <key alias="noMacroParams">Это макрос без параметров</key>
+
     <key alias="externalLoginProviders">Провайдеры аутентификации</key>
     <key alias="exceptionDetail">Подробное сообщение об ошибке</key>
     <key alias="stacktrace">Трассировка стека</key>
     <key alias="innerException">Inner Exception</key>
+
     <key alias="linkYour">Связать</key>
     <key alias="unLinkYour">Разорвать связь</key>
+
     <key alias="account">учетную запись</key>
+
     <key alias="selectEditor">Выбрать редактор</key>
   </area>
   <area alias="dictionaryItem">
@@ -585,7 +608,9 @@
 		<p>Пожалуйста, не волнуйтесь, ни одной строки Вашей базы данных
 		не будет потеряно при данной операции, и после ее завершения все будет работать!</p>
 		]]></key>
-    <key alias="databaseUpgradeDone"><![CDATA[Ваша база данных успешно обновлена до последней версии %0%.<br/>Нажмите <strong>Далее</strong> для продолжения. ]]></key>
+    <key alias="databaseUpgradeDone">
+      <![CDATA[Ваша база данных успешно обновлена до последней версии %0%.<br/>Нажмите <strong>Далее</strong> для продолжения. ]]>
+    </key>
     <key alias="databaseUpToDate"><![CDATA[Указанная Вами база данных находится в актуальном состоянии. Нажмите кнопку <strong>Далее</strong> для продолжения работы мастера настроек]]></key>
     <key alias="defaultUserChangePass"><![CDATA[<strong>Пароль пользователя по-умолчанию необходимо сменить!</strong>]]></key>
     <key alias="defaultUserDisabled"><![CDATA[<strong>Пользователь по-умолчанию заблокирован или не имеет доступа к Umbraco!</strong></p><p>Не будет предпринято никаких дальнейших действий. Нажмите кнопку <strong>Далее</strong> для продолжения.]]></key>
@@ -593,7 +618,8 @@
     <key alias="defaultUserPasswordChanged">Пароль изменен!</key>
     <key alias="defaultUserText"><![CDATA[
 		<p>Umbraco создает пользователя по-умолчанию с именем входа <strong>('admin')</strong> и паролем <strong>('default')</strong>.
-		<strong>ОЧЕНЬ ВАЖНО</strong> изменить пароль по-умолчанию на что-либо уникальное.</p>]]></key>
+		<strong>ОЧЕНЬ ВАЖНО</strong> изменить пароль по-умолчанию на что-либо уникальное.</p>]]>
+    </key>
     <key alias="greatStart">Для начального обзора возможностей системы рекомендуем посмотреть ознакомительные видеоматериалы</key>
     <key alias="licenseText"><![CDATA[Нажимая кнопку <strong>Далее</strong> (или модифицируя вручную ключ "UmbracoConfigurationStatus" в файле "web.config"), Вы принимаете лицензионное соглашение для данного программного обеспечения, расположенное ниже. Пожалуйста, обратите внимание, что инсталляционный пакет Umbraco отвечает двум различным типам лицензий: лицензии MIT на программные продукты с открытым исходным кодом в части ядра системы и свободной лицензии Umbraco в части пользовательского интерфейса.]]></key>
     <key alias="None">Система не установлена.</key>
@@ -710,11 +736,11 @@
     <key alias="allMembers">Все участники</key>
   </area>
   <area alias="modelsBuilder">
-    <key alias="buildingModels">Построение моделей</key>
-    <key alias="waitingMessage">это может занять некоторое время, пожалуйста, подождите</key>
-    <key alias="modelsGenerated">Модели построены</key>
-    <key alias="modelsGeneratedError">Модели не могут быть построены</key>
-    <key alias="modelsExceptionInUlog">Процесс построения моделей завершился ошибкой, подробности в системном журнале Umbraco</key>
+      <key alias="buildingModels">Построение моделей</key>
+      <key alias="waitingMessage">это может занять некоторое время, пожалуйста, подождите</key>
+      <key alias="modelsGenerated">Модели построены</key>
+      <key alias="modelsGeneratedError">Модели не могут быть построены</key>
+      <key alias="modelsExceptionInUlog">Процесс построения моделей завершился ошибкой, подробности в системном журнале Umbraco</key>
   </area>
   <area alias="moveOrCopy">
     <key alias="choose">Выберите страницу...</key>
@@ -849,7 +875,7 @@
     <key alias="contentPublishedFailedByEvent"><![CDATA[
 		Документ %0% не может быть опубликован. Операцию отменил установленный в системе пакет дополнений.
 		]]></key>
-    <key alias="contentPublishedFailedExpired"><![CDATA[
+	<key alias="contentPublishedFailedExpired"><![CDATA[
       Документ %0% не может быть опубликован, так как текущая информация в нем устарела.
     ]]></key>
     <key alias="contentPublishedFailedByParent"><![CDATA[
@@ -934,10 +960,14 @@
     <key alias="addTemplate">Добавить шаблон</key>
     <key alias="addChildNode">Добавить дочерний узел</key>
     <key alias="addChild">Добавить дочерний</key>
+
     <key alias="editDataType">Изменить тип данных</key>
+
     <key alias="navigateSections">Навигация по разделам</key>
+
     <key alias="shortcut">Ярлыки</key>
     <key alias="showShortcuts">показать ярлыки</key>
+
     <key alias="toggleListView">В формате списка</key>
     <key alias="toggleAllowAsRoot">Разрешить в качестве корневого</key>
   </area>
@@ -972,8 +1002,7 @@
     <key alias="editContentSendToPublish">Отослано на утверждение</key>
     <key alias="editContentSendToPublishText">Изменения отосланы на утверждение</key>
     <key alias="editMediaSaved">Медиа-элемент сохранен</key>
-    <key alias="editMediaSavedText">
-    </key>
+    <key alias="editMediaSavedText"></key>
     <key alias="editMemberSaved">Участник сохранен</key>
     <key alias="editStylesheetPropertySaved">Правило стиля CSS сохранено</key>
     <key alias="editStylesheetSaved">Стиль CSS сохранен</key>

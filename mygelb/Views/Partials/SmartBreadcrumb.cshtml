@@ -3,24 +3,24 @@
 @using Umbraco.Web;
 @using Umbraco.Core.Models;
 @{
-    <nav>
-        <ul class="breadcrumb responsiveWidth">
+
+<div class="small-12 columns">
+    <nav aria-label="You are here:" role="navigation">
+        <ul class="breadcrumbs content-padding">
             @* List the current page ancestors, order by id to fix layout issue *@
-            @foreach(IPublishedContent objLevel in Model.Content.Ancestors().Where(x => x.IsVisible()).OrderBy(x => x.Level))
-	        {
-		        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            @foreach (IPublishedContent objLevel in Model.Content.Ancestors().Where(x => x.IsVisible()).OrderBy(x => x.Level))
+            {
+                <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
                     <a href="@Umbraco.NiceUrl(objLevel.Id)" itemprop="url">
                         <span itemprop="title">@objLevel.Name</span>
                     </a>
-                    &nbsp;&raquo;&nbsp;
-		        </li>
-	        }
+                </li>
+            }
 
-	        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                <a href="@Umbraco.NiceUrl(Model.Content.Id)" itemprop="url">
-                    <span itemprop="title">@Model.Content.Name</span>
-                </a>
-	        </li>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span itemprop="title">@Model.Content.Name</span>
+            </li>
         </ul>
     </nav>
+</div>
 }

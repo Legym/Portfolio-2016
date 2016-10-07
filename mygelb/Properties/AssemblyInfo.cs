@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("mygelb")]
+[assembly: AssemblyTitle("UmbracoTemplate")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("mygelb")]
+[assembly: AssemblyProduct("UmbracoTemplate")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bae42ded-efe9-4af6-9000-3c8c82d74e6f")]
+[assembly: Guid("4194cce6-37bb-4176-a3dc-53261b1a20e5")]
 
 // Version information for an assembly consists of the following four values:
 //

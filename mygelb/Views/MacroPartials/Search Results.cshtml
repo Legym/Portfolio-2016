@@ -12,7 +12,7 @@
     var searcher = ExamineManager.Instance;
     var searchCriteria = searcher.CreateSearchCriteria();
 
-    var query = searchCriteria.GroupedOr(new[] { "body", "nodeName", "name", "title", "bodyText", "seo" }, searchTerm).Compile();
+    var query = searchCriteria.GroupedOr(new[] { "body", "nodeName", "name", "title", "bodyText", "seo", "smartBlogBody", "smartBlogSeoTitle", "smartBlogAuthor", "projectMainText" }, searchTerm).Compile();
 
     var searchResults = searcher.Search(query).Where(r => r["__IndexType"] == "content").ToList();
 

@@ -1,6 +1,6 @@
 ## Mygelb
 My portfolio about Mygel Bergstresser. 
-Site Url: Mygelb.com (Not live)
+Site Url: Mygelb.com
 
 CMS: Umbraco 7.4.3
 Web Server: IIS 10d

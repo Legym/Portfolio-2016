@@ -2,12 +2,11 @@
 My portfolio about Mygel Bergstresser. 
 Site Url: Mygelb.com
 
-CMS: Umbraco 7.4.3
-Web Server: IIS 10d
-SQL Server: Microsoft SQLServer
-IDE: Visual Studio
-
-Localdb: mygelb.sql
+# Need help installing locally?
+1. Load mygelb.bak into MSSQL
+2. Go to web.config and connect to database  in MSSQL.
+3. OPTIONAL: If pushing to production server enable SSL in web.config. If not, leave as is.
+4. Compile and Voila! 
 
 # Installation of a new Umbraco Project
 1. Visual Studio > File > New Project

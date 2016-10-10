@@ -100,8 +100,6 @@
 
     }
 
-
-
     .about-experience {
         background-color: #d4d4d4;
         width: 100%;
@@ -118,6 +116,16 @@
             padding: 100px 0;
         }
 
+        .btn-resume {
+            background: white;
+            color: black;
+            margin-top: 10px;
+
+            @include breakpoint(medium) {
+                width: 49%;
+            }
+        }
+
         h6 {
             margin-top: 40px;
             font-size: 2rem;
@@ -127,14 +135,14 @@
 
             @include breakpoint(medium) {
                 text-align: left;
-                margin: 20px 0;
+                margin: 25px 0;
                 margin-top: 0;
                 font-size: 2em;
                 margin-bottom: 25px;
             }
 
             @include breakpoint(large) {
-                margin: 20px 0 5px 0;
+                margin: 30px 0 5px 0;
             }
 
         }
